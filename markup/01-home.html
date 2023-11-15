@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, width=device-width, height=device-height, viewport-fit=cover">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+	<link media="all" rel="stylesheet" href="css/root.css">
+	<link media="all" rel="stylesheet" href="css/style.css?_v=20230524172740">
+	<title>DebtLeads.ca</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container header__container">
+				<a href="#" class="logo">
+					<svg viewBox="0 0 292 39">
+						<path d="M0 37.6271V2.44869C2.98032 1.96971 6.86538 1.65039 10.9101 1.65039C17.7755 1.65039 22.246 2.92767 25.652 5.48223C29.3774 8.24967 31.7191 12.667 31.7191 19.0001C31.7191 25.8655 29.2178 30.6021 25.8117 33.5292C22.0331 36.6692 16.2321 38.1593 9.20706 38.1593C5.00268 38.1593 1.96914 37.8932 0 37.6271ZM8.08944 8.19645V31.6665C8.7813 31.8262 9.95214 31.8262 10.9101 31.8262C18.3077 31.8794 23.1507 27.8347 23.1507 19.2662C23.1507 11.8154 18.7867 7.87713 11.7616 7.87713C10.0054 7.87713 8.7813 8.03679 8.08944 8.19645Z"></path>
+						<path d="M59.781 27.3547H43.0167C43.2296 30.7075 46.5825 32.3041 50.3611 32.3041C53.1285 32.3041 55.3638 31.9316 57.5458 31.1865L58.6102 36.6682C55.9492 37.7858 52.7028 38.318 49.1903 38.318C40.3557 38.318 35.2998 33.2089 35.2998 25.0662C35.2998 18.4669 39.3978 11.1758 48.4452 11.1758C56.8539 11.1758 60.0471 17.7219 60.0471 24.1615C60.0471 25.5452 59.8875 26.7693 59.781 27.3547ZM42.9635 21.8198H52.5431C52.5431 19.8507 51.6916 16.551 47.9662 16.551C44.5601 16.551 43.1764 19.691 42.9635 21.8198Z"></path>
+						<path d="M64.9072 30.0161V0H72.9967V14.8484H73.1031C74.6465 12.6131 77.3607 11.1762 80.9797 11.1762C87.2064 11.1762 91.7301 16.3385 91.6769 24.3215C91.6769 33.6883 85.7695 38.3716 79.8088 38.3716C76.7753 38.3716 73.795 37.254 71.9855 34.1672H71.879L71.5597 37.7862H64.6943C64.8008 36.0832 64.9072 32.9432 64.9072 30.0161ZM72.9967 22.8846V26.7164C72.9967 27.2486 73.0499 27.7276 73.1563 28.1534C73.6885 30.2822 75.5512 31.9852 77.8929 31.9852C81.3522 31.9852 83.481 29.3242 83.481 24.6409C83.481 20.5961 81.6715 17.4029 77.8929 17.4029C75.7109 17.4029 73.6885 19.0528 73.1563 21.3944C73.0499 21.8734 72.9967 22.3524 72.9967 22.8846Z"></path>
+						<path d="M97.8323 6.91835L105.762 4.73633V11.7613H111.563V17.722H105.762V27.1419C105.762 30.2819 106.561 31.7188 108.955 31.7188C110.073 31.7188 110.605 31.6656 111.35 31.5059L111.404 37.6262C110.392 37.9988 108.423 38.3181 106.188 38.3181C103.58 38.3181 101.398 37.4134 100.068 36.0829C98.5774 34.5395 97.8323 32.0381 97.8323 28.366V17.722H94.373V11.7613H97.8323V6.91835Z"></path>
+						<path class="path-fill" d="M116.576 37.7863V19.8512V1.91602H124.665V30.9741H138.928V37.7863H116.576Z"></path>
+						<path class="path-fill" d="M165.962 27.3547H149.197C149.41 30.7075 152.763 32.3041 156.542 32.3041C159.309 32.3041 161.544 31.9316 163.726 31.1865L164.791 36.6682C162.13 37.7858 158.883 38.318 155.371 38.318C146.536 38.318 141.48 33.2089 141.48 25.0662C141.48 18.4669 145.578 11.1758 154.626 11.1758C163.034 11.1758 166.228 17.7219 166.228 24.1615C166.228 25.5452 166.068 26.7693 165.962 27.3547ZM149.144 21.8198H158.724C158.724 19.8507 157.872 16.551 154.147 16.551C150.741 16.551 149.357 19.691 149.144 21.8198Z"></path>
+						<path class="path-fill" d="M192.748 22.4056V31.5062C192.748 33.9544 192.855 36.3493 193.174 37.7862H185.883L185.404 35.1784H185.244C183.541 37.254 180.88 38.3716 177.793 38.3716C172.525 38.3716 169.385 34.5398 169.385 30.3886C169.385 23.6297 175.452 20.4365 184.659 20.4365V20.1172C184.659 18.6802 183.914 16.7111 179.922 16.7111C177.261 16.7111 174.441 17.6158 172.738 18.6802L171.247 13.4647C173.057 12.4535 176.623 11.123 181.359 11.123C190.034 11.123 192.748 16.2321 192.748 22.4056ZM184.925 28.313V25.4924C180.667 25.4924 177.368 26.5036 177.368 29.5903C177.368 31.6659 178.751 32.6771 180.561 32.6771C182.53 32.6771 184.233 31.3466 184.765 29.6968C184.872 29.271 184.925 28.792 184.925 28.313Z"></path>
+						<path class="path-fill" d="M216.342 0H224.431V30.0161C224.431 32.9432 224.538 36.0299 224.644 37.7862H217.459L217.14 34.0076H216.98C215.384 36.8815 212.191 38.3716 208.838 38.3716C202.664 38.3716 197.715 33.1028 197.715 25.0134C197.662 16.2321 203.143 11.123 209.37 11.123C212.616 11.123 215.065 12.2938 216.235 14.0501H216.342V0ZM216.342 26.1842V22.7782C216.342 22.3524 216.342 21.767 216.235 21.288C215.756 19.1592 214 17.3497 211.499 17.3497C207.773 17.3497 205.911 20.6494 205.911 24.7473C205.911 29.1646 208.093 31.932 211.446 31.932C213.787 31.932 215.703 30.3354 216.182 28.0469C216.289 27.4615 216.342 26.8229 216.342 26.1842Z"></path>
+						<path class="path-fill" d="M229.418 36.5089L230.855 30.7612C232.345 31.6659 235.432 32.6771 237.827 32.6771C240.275 32.6771 241.286 31.8788 241.286 30.5483C241.286 29.1646 240.488 28.5259 237.508 27.5147C232.079 25.7053 230.004 22.7782 230.057 19.6914C230.057 14.7952 234.208 11.123 240.648 11.123C243.681 11.123 246.342 11.8681 247.939 12.6664L246.555 18.2545C245.384 17.6158 243.096 16.7643 240.914 16.7643C238.944 16.7643 237.827 17.5626 237.827 18.8399C237.827 20.1172 238.838 20.7558 242.031 21.8734C246.981 23.5765 249.003 26.131 249.056 29.9096C249.056 34.8059 245.278 38.3716 237.827 38.3716C234.421 38.3716 231.387 37.5733 229.418 36.5089Z"></path>
+						<path d="M255.43 38.1611C253.696 38.1611 252.438 36.8351 252.438 35.0331C252.438 33.1631 253.696 31.8711 255.498 31.8711C257.266 31.8711 258.49 33.1291 258.524 35.0331C258.524 36.8351 257.3 38.1611 255.43 38.1611Z"></path>
+						<path d="M273.51 33.5371L274.122 37.3451C273.204 37.7871 271.47 38.1271 269.498 38.1271C264.126 38.1271 260.692 34.8291 260.692 29.6271C260.692 24.7651 264.024 20.7871 270.212 20.7871C271.572 20.7871 273.068 21.0251 274.156 21.4331L273.34 25.2751C272.728 25.0031 271.81 24.7651 270.45 24.7651C267.73 24.7651 265.962 26.7031 265.996 29.4231C265.996 32.4491 268.036 34.0811 270.552 34.0811C271.776 34.0811 272.728 33.8771 273.51 33.5371Z"></path>
+						<path d="M290.954 27.96V33.774C290.954 35.338 291.022 36.868 291.226 37.786H286.568L286.262 36.12H286.16C285.072 37.446 283.372 38.16 281.4 38.16C278.034 38.16 276.028 35.712 276.028 33.06C276.028 28.742 279.904 26.702 285.786 26.702V26.498C285.786 25.58 285.31 24.322 282.76 24.322C281.06 24.322 279.258 24.9 278.17 25.58L277.218 22.248C278.374 21.602 280.652 20.752 283.678 20.752C289.22 20.752 290.954 24.016 290.954 27.96ZM285.956 31.734V29.932C283.236 29.932 281.128 30.578 281.128 32.55C281.128 33.876 282.012 34.522 283.168 34.522C284.426 34.522 285.514 33.672 285.854 32.618C285.922 32.346 285.956 32.04 285.956 31.734Z"></path>
+					</svg>
+				</a>
+				<div class="nav-drop">
+					<nav class="nav-drop__wrap">
+						<ul class="menu">
+							<li class="menu__item">
+								<a href="#" class="menu__link">Contact Us</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Log In</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__btn">Get Leads</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<button class="nav-opener"><span></span></button>
+			</div>
+		</header>
+		<main class="main">
+			<section class="section-hero">
+				<div class="container">
+					<div class="hero">
+						<div class="hero__content fade-in">
+							<h1 class="hero__headtitle">High-Quality Debt Leads</h1>
+							<span class="hero__subtitle">Qualified, reliable leads for debt advisors and Licensed Insolvency Trustees</span>
+							<form action="#" class="contact-form">
+								<div class="form-row">
+									<div class="form-row__field">
+										<input type="text" placeholder="Your Name">
+									</div>
+									<div class="form-row__field">
+										<input type="email" placeholder="Email Address">
+									</div>
+									<div class="form-row__field">
+										<input type="tel" placeholder="Phone Number">
+									</div>
+									<div class="form-row__field">
+										<input type="text" placeholder="Website">
+									</div>
+									<div class="form-row__field form-row__field--btn">
+										<button type="submit" class="btn">Get Leads</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="hero__img fade-in">
+							<picture>
+								<source srcset="img/phone-mockup@2x.png" media="(min-width: 1023px)">
+								<img src="img/phone-mockup-mobile.png" width="322" alt="image description" srcset="img/phone-mockup-mobile@2x.png 2x">
+							</picture>
+						</div>
+					</div>
+				</div>
+				<div class="bg-decor">
+					<picture>
+						<source srcset="img/figure-01.svg" media="(min-width: 768px)">
+						<img src="img/figure-03.svg" alt="image description">
+					</picture>
+				</div>
+			</section>
+			<section class="section-note">
+				<div class="container">
+					<h3 class="section-note__text fade-in">We generate more than 4,000 debt leads per month across Canada</h3>
+				</div>
+			</section>
+			<section class="section-service">
+				<div class="container">
+					<ul class="service-list fade-in-staggered">
+						<li class="service-list__item">
+							<div class="service-card">
+								<h5 class="service-card__title">
+									<span class="service-card__icon">
+										<img src="img/icon-01.png" width="38" alt="image description" srcset="img/icon-01@2x.png 2x">
+									</span>
+									Exclusive Leads
+								</h5>
+								<p>Your leads are 100% exclusive to you, giving you better contact &amp; closing rates</p>
+							</div>
+						</li>
+						<li class="service-list__item">
+							<div class="service-card">
+								<h5 class="service-card__title">
+									<span class="service-card__icon">
+										<img src="img/icon-02.png" width="35" alt="image description" srcset="img/icon-02@2x.png 2x">
+									</span>
+									Qualified Leads
+								</h5>
+								<p>We only send you motivated debtors who meet the criteria to file a consumer proposal</p>
+							</div>
+						</li>
+						<li class="service-list__item">
+							<div class="service-card">
+								<h5 class="service-card__title">
+									<span class="service-card__icon">
+										<img src="img/icon-03.png" width="32" alt="image description" srcset="img/icon-03@2x.png 2x">
+									</span>
+									Real-Time Delivery
+								</h5>
+								<p>Leads are delivered in real-time, the moment they fill out our form</p>
+							</div>
+						</li>
+						<li class="service-list__item">
+							<div class="service-card">
+								<h5 class="service-card__title">
+									<span class="service-card__icon">
+										<img src="img/icon-04.png" width="38" alt="image description" srcset="img/icon-04@2x.png 2x">
+									</span>
+									Phone &amp; Email Validation
+								</h5>
+								<p>We use software to verify the phone and email address of every lead submission</p>
+							</div>
+						</li>
+						<li class="service-list__item">
+							<div class="service-card">
+								<h5 class="service-card__title">
+									<span class="service-card__icon">
+										<img src="img/icon-05.png" width="32" alt="image description" srcset="img/icon-05@2x.png 2x">
+									</span>
+									Reliable Volume
+								</h5>
+								<p>We hit our customers' daily lead caps more than 95% of the time</p>
+							</div>
+						</li>
+						<li class="service-list__item">
+							<div class="service-card">
+								<h5 class="service-card__title">
+									<span class="service-card__icon">
+										<img src="img/icon-06.png" width="35" alt="image description" srcset="img/icon-06@2x.png 2x">
+									</span>
+									Geographic Targeting
+								</h5>
+								<p>Target nationally, by province, city, postal code or a radius around an office</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="section-tile bg-gray">
+				<div class="container">
+					<div class="tile">
+						<div class="tile__content tile__content--width fade-in">
+							<span class="subheading">How we qualify leads</span>
+							<h2 class="tile__headtitle">Qualified consumer proposal leads delivered to your inbox or CRM</h2>
+							<p>Our marketing is focussed on qualifying people for and selling the benefits of filing a consumer proposal. This makes our leads ideal for debt advisors and Licensed Insolvency Trustees. Our leads meet the following qualifications.</p>
+							<a href="#" class="btn">Get leads</a>
+						</div>
+						<div class="tile__visual fade-in">
+							<div class="notepad">
+								<div class="notepad__content">
+									<h2 class="notepad__title">Our Leads</h2>
+									<ul class="notepad__list">
+										<li class="notepad__item">Have a minimum of $10,000 in unsecured debt.</li>
+										<li class="notepad__item">Don't have student loan debt less than 7 years old.</li>
+										<li class="notepad__item">Aren't already in a consumer proposal or bankruptcy.</li>
+										<li class="notepad__item">Are within your targeted geographic region.</li>
+									</ul>
+								</div>
+								<span class="notepad__bg">
+									<img src="img/figure-02.png" width="530" alt="image description" srcset="img/figure-02@2x.png 2x">
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section-tile section-tile--offset-bottom">
+				<div class="container">
+					<div class="tile">
+						<div class="tile__visual tile__visual--full-img fade-in">
+							<picture>
+								<source srcset="img/tablet@2x.png" media="(min-width: 568px)">
+								<img class="tile__img" src="img/tablet-mobile.png" width="495" alt="image description" srcset="img/tablet-mobile@2x.png 2x">
+							</picture>
+						</div>
+						<div class="tile__content fade-in">
+							<span class="subheading">The lead data we collect</span>
+							<h2 class="tile__headtitle">We gather more data to maximize your closing rates</h2>
+							<p>We gather 20+ fields of information to build a profile on each debtor and help you close more files. We can even provide you with the IP address of the person who filled out our form.</p>
+							<a href="#" class="btn">Get leads</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section-tile section-tile--offset-md-bottom bg-gray">
+				<div class="container">
+					<div class="tile tile--gap">
+						<div class="tile__content fade-in">
+							<span class="subheading">Start and stop when you want</span>
+							<h2 class="tile__headtitle">Supplement your other lead sources when times are slow</h2>
+							<p>We can help fill your caps! As long as your account is funded you can turn the lead flow on whenever you like. Use us to plug the holes on days when lead volume is low or cost per lead is too high.</p>
+							<a href="#" class="btn">Get leads</a>
+						</div>
+						<div class="tile__visual tile__visual--browser-img fade-in">
+							<picture>
+								<source srcset="img/browser-window@2x.png" media="(min-width: 568px)">
+								<img class="tile__img" src="img/browser-window-mobile.png" width="631" alt="image description" srcset="img/browser-window-mobile@2x.png 2x">
+							</picture>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section-testimonial">
+				<div class="container">
+					<div class="swiper testimonial-slider fade-in">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="testimonial">
+									<span class="testimonial__img">
+										<img src="img/author-01.png" width="115" alt="image description" srcset="img/author-01@2x.png 2x">
+									</span>
+									<blockquote class="testimonial__quote">
+										<p>I have consistently made money when utilizing DebtLeads.ca, usually recognizing a return of 4 to 1. I believe DebtLeads.ca, when used consistently and with the right amount of follow up and dedication, can be an effective part of any offices’ marketing portfolio.</p>
+										<cite>Zach Brull, 4 Pillars</cite>
+									</blockquote>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="testimonial">
+									<span class="testimonial__img">
+										<img src="img/author-01.png" width="115" alt="image description" srcset="img/author-01@2x.png 2x">
+									</span>
+									<blockquote class="testimonial__quote">
+										<p>I have consistently made money when utilizing DebtLeads.ca, usually recognizing a return of 4 to 1. I believe DebtLeads.ca, when used consistently and with the right amount of follow up and dedication, can be an effective part of any offices’ marketing portfolio.</p>
+										<cite>Zach Brull, 4 Pillars</cite>
+									</blockquote>
+								</div>
+							</div>
+						</div>
+						<div class="slider-btn-prev"></div>
+						<div class="slider-btn-next"></div>
+					</div>
+				</div>
+			</section>
+			<section class="section-advantage">
+				<div class="container">
+					<ul class="advantage-list fade-in-staggered">
+						<li class="advantage-list__item">
+							<div class="advantage-card">
+								<span class="advantage-card__icon">
+									<img src="img/icon-07.png" width="67" alt="image description" srcset="img/icon-07@2x.png 2x">
+								</span>
+								<h3 class="advantage-card__title">We’re Old School</h3>
+								<p>We've been generating debt leads in Canada since 2011</p>
+							</div>
+						</li>
+						<li class="advantage-list__item">
+							<div class="advantage-card">
+								<span class="advantage-card__icon">
+									<img src="img/icon-08.png" width="45" alt="image description" srcset="img/icon-08@2x.png 2x">
+								</span>
+								<h3 class="advantage-card__title">1,000,000 Leads</h3>
+								<p>We've sold nearly one million quality leads to date</p>
+							</div>
+						</li>
+						<li class="advantage-list__item">
+							<div class="advantage-card">
+								<span class="advantage-card__icon">
+									<img src="img/icon-09.png" width="53" alt="image description" srcset="img/icon-09@2x.png 2x">
+								</span>
+								<h3 class="advantage-card__title">Free Integration</h3>
+								<p>We can provide free integration to the CRM of your choice</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="bg-stretch">
+					<img src="img/bg-layer.png" alt="image description" srcset="img/bg-layer@2x.png 2x">
+				</div>
+			</section>
+			<section class="section-faq">
+				<div class="container">
+					<div class="accordion fade-in">
+						<div class="accordion__item">
+							<h5 class="accordion__title">Is there a month to month contract I need to sign?</h5>
+							<div class="accordion__expanded">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<h5 class="accordion__title">Are my leads sold to anyone else?</h5>
+							<div class="accordion__expanded">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<h5 class="accordion__title">Can I set a daily lead cap?</h5>
+							<div class="accordion__expanded">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<h5 class="accordion__title">How are leads delivered?</h5>
+							<div class="accordion__expanded">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<h5 class="accordion__title">What are my options for geographic targeting?</h5>
+							<div class="accordion__expanded">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<h5 class="accordion__title">Is there a minimum order?</h5>
+							<div class="accordion__expanded">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<h5 class="accordion__title">What is your return policy?</h5>
+							<div class="accordion__expanded">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<h5 class="accordion__title">Are your forms CASL Compliant?</h5>
+							<div class="accordion__expanded">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<h5 class="accordion__title">What conversion rate should I expect?</h5>
+							<div class="accordion__expanded">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<h5 class="accordion__title">What days and times will I receive leads?</h5>
+							<div class="accordion__expanded">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section-cta">
+				<div class="container">
+					<div class="cta fade-in">
+						<h3 class="cta__title">Let’s help more Canadians become debt free!</h3>
+						<a href="#" class="btn btn--white btn--sm">Get leads</a>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<strong class="footer__logo">
+            <img src="img/logo-light.svg" width="115" alt="DebtLeads.ca">
+        </strong>
+				<p>© 2023 DebtLeads.ca. All Rights Reserved.</p>
+				<address>4720 Kingsway Suite 2600, Burnaby, BC, Canada, V5H4N2.</address>
+			</div>
+		</footer>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.main.js?_v=20230524172740" defer=""></script>
+</body>
+
+</html>
